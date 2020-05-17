@@ -21,8 +21,29 @@ pod 'UIWaiting'
 import UIKit
 import UIWaiting
 
-class ViewController: UIViewController, UIWaitingViewExtend {
+extension ViewController: UIWaitingViewExtend {
+    
+    // MARK: Custom UI waiting view
+    func setWaitingTitleFont() -> UIFont {
+        return .boldSystemFont(ofSize: 18)
+    }
+    
+    func setWaitingIndicatorBackgroundColor() -> UIColor {
+        return UIColor.white.withAlphaComponent(0.1)
+    }
+    
+    func setWaitingBackgroundColor() -> UIColor {
+        return UIColor.black.withAlphaComponent(0.1)
+    }
+    
+    func setWaitingTitleColor() -> UIColor {
+        return .black
+    }
+    
+}
 
+class ViewController: UIViewController {
+    
     let button: UIButton = {
         let view: UIButton = UIButton()
         view.frame = CGRect(x: 100, y: 100, width: 200, height: 50)
@@ -39,15 +60,15 @@ class ViewController: UIViewController, UIWaitingViewExtend {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         button.addTarget(self, action: #selector(tap), for: .touchUpInside)
         
     }
     
+    // Show Waiting
     @objc func tap() {
         self.startWaiting("PROCESSING")
         
+        // Hide Waiting
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             self.stopWaiting()
         }
