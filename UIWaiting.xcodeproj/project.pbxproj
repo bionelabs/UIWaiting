@@ -21,6 +21,16 @@
 		05E8447924705BC100A13946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E8447724705BC100A13946 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		05E8447E2470DEDF00A13946 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E8444624705B3100A13946 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05E8444E24705B3100A13946;
+			remoteInfo = UIWaiting;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		05E8444F24705B3100A13946 /* UIWaiting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIWaiting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E8445224705B3100A13946 /* UIWaiting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIWaiting.h; sourceTree = "<group>"; };
@@ -163,6 +173,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				05E8447F2470DEDF00A13946 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -250,6 +261,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05E8447F2470DEDF00A13946 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05E8444E24705B3100A13946 /* UIWaiting */;
+			targetProxy = 05E8447E2470DEDF00A13946 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		05E8447224705BBB00A13946 /* Main.storyboard */ = {

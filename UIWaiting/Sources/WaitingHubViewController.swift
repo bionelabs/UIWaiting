@@ -10,7 +10,7 @@ import UIKit
 
 class WaitingHubViewController: UIViewController {
     
-    private var activityIndicatorView: UIActivityIndicatorView = {
+    var activityIndicatorView: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.style = .white
@@ -21,7 +21,7 @@ class WaitingHubViewController: UIViewController {
         return view
     }()
     
-    private var titelLabel: UILabel = {
+    var titelLabel: UILabel = {
         let view = UILabel()
         view.font = UIFont.systemFont(ofSize: 14)
         view.textAlignment = .center

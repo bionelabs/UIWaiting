@@ -9,8 +9,18 @@
 import UIKit
 import UIWaiting
 
-class ViewController: UIViewController, UIWaitingViewExtend {
 
+
+extension ViewController: UIWaitingViewExtend {
+    
+    func setWaitingTitleFont() -> UIFont {
+        return .boldSystemFont(ofSize: 18)
+    }
+    
+}
+
+class ViewController: UIViewController {
+    
     let button: UIButton = {
         let view: UIButton = UIButton()
         view.frame = CGRect(x: 100, y: 100, width: 200, height: 50)
